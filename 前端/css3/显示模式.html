@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            display: inline-block;/* 显示模式转换 */
+        }
+        span{
+            width: 300px; /* 无效 */
+            height: 300px; /* 无效 */
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 块级元素：独占一行；宽度默认父级，高度默认内容
+        可设置宽高
+      div,p,h,ul,li....-->
+    <div>111</div>
+    <div>222</div>
+<br>
+    <!-- 行内元素：一行多个；宽度默认父级，高度默认内容
+        不可设置宽高
+      a,span... -->
+    <span>span</span>
+    <span>span</span>
+
+    <!-- 行内块元素：一行多个；可设置宽高 
+      input，txetarea,img-->
+    <img src="" alt="">
+
+
+</body>
+</html>

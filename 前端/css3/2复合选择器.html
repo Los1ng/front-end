@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 （空格） */
+        /* 选择器1 选择器2 {css} 所有同类后代都会选择*/
+        div p {
+            color: red;
+        }
+
+        /* 子代选择器 （>）*/
+        /* 选择器1>选择器2 {css} 只选择儿子 */
+
+        /* 并集选择器（，） */
+        /* 选择器1,选择器2 {css} 同时选择多组标签 */
+
+        /* 交集选择器 （无）*/
+        /* 选择器1选择器2 {css} 选择同时满足多条件标签 */
+
+        /* hover伪类选择器 任何标签都可以添加*/
+        /* 选择器:hover{css}  鼠标悬停时元素的状态和样式 */
+        p:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p>p标签</p>
+    
+    <div>
+        <p>div的儿子p</p><!-- 父子标签 -->
+    </div>
+</body>
+</html>

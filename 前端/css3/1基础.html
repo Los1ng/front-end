@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css写在style中，style一般放在head/title下 -->
+    <!-- 标签选择器，以标签名命名，选中标签的全生效（所有p生效） -->
+
+    <!-- 类选择器，（.类名）区分可以重复，所有标签含有class类属性 -->
+    <!-- 类名可以为字母，数字，下划线，中划线，只能以字母下划线开头 -->
+
+    <!-- id选择器，（#id）区分不可重复 -->
+    <!-- id可以为字母，数字，下划线，中划线，只能以字母下划线开头 -->
+    
+    <!--  通配符选择器（*），选中所有标签 -->
+    <style>
+        .one1_y-m
+        {
+            color: green;
+        }
+        p {
+            /* 文字颜色变红色 */
+            color: red;
+            color: blue;/* 后属性覆盖前 */
+            /* 颜色取值： */
+            /* rgb(0,0,0) 0~255*/ 
+            /* rgba(0,0,0,0) a为透明度（0~1）*/
+            /* #ffffff (十六进制rgb) */
+            
+            /* 字体文本样式  */
+            font-size: 30px;  /* 字变大 px:像素,默认16px */
+            font-weight: 700;  /* 字变粗(strong,b) */
+            font-style: italic;/* 倾斜（em,i） */
+            font-family: 微软雅黑,黑体,sans-serif; /* 字体，默认微软雅黑 */
+            /* 1.无衬线字体：笔画均匀无饰，黑体、arial */
+            /* 2.衬线字体：笔画不均匀，有笔锋，宋体、times new rome */
+            /* 3.等宽字体：字符宽度相等，consolas,fira code */
+            
+            font: italic 700 30px/8px 微软雅黑;/* 字体简写，字号字体不能省略 */
+            
+            text-indent: 2em;/* 首行缩进 */
+            /* px或em,1em为当前字体大小一倍 */
+            
+            text-align: left;/* 文本水平对齐 */
+            /*  能让文本，img,a,input,span 也对齐*/
+            margin: 0 auto; /* 标签盒子水平居中 */
+           
+            
+            text-decoration: underline;/* 文本修饰 */
+            /* underline 下划线，常用 */
+            /* line-through 删除线 */
+            /* overline 上划线 */
+            /* none 无装饰线，常用 */
+
+            line-height: 8px;/* 行高(px或em) */
+            
+            /* 背景颜色 */
+            background-color: green;
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个p标签</p>
+    <div class="one1_y-m"></div>
+    <!-- 内嵌式 写在style中 -->
+
+    <!-- 外联式 写在.css文件中，link标签引入 -->
+    <!-- <link rel="stylesheet" href="目标路径"> -->
+
+    <!-- 行内式 写在style属性中 ,配合js使用-->
+    <!-- <div style="color: green;">这是div标签</div> -->
+    
+   
+    
+</body>
+</html>

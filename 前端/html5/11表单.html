@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单一般只用在登陆，注册，搜索页 -->
+    <!-- input 输入标签，type属性不同，效果不同
+     text     单行文本（提示字placeholder）
+     password 密码
+     radio    多选一（name相同为一组,checked默认）
+     checkbox 多选多(勾选框也是)
+     file     上传文件(multiple多选文件)
+     submit   提交按钮
+     reset    重置按钮
+     button   普通按钮，配合js加功能 -->
+     <form action="">  
+        <!-- 用户输入表单 -->
+     <input type="text" placeholder="请输入用户名">
+     <br>
+     <input type="password" placeholder="请输入密码">
+     <br>
+     <!-- 单选框 radio 默认 checked-->
+     <!-- label  绑定内容与标签-->
+     <!-- 方法一 -->
+     性别:<input type="radio" name="sex" id="nan">男 <label for="nan">男</label>
+          <label ><input type="radio" name="sex">女</label><!-- 方法二 -->
+     <br>
+     <input type="checkbox">
+     <br>
+     <input type="file" multiple>
+     <br>
+     <input type="submit">
+     <input type="reset">
+     <input type="button" value="普通按钮">
+     <br>
+     <button type="submit">提交按钮</button>
+     <button type="reset">重置按钮</button>
+     <button type="button">普通按钮</button>
+     <br>
+     <!-- 下拉菜单 select 每一项 option 默认 selected -->
+     <select >
+        <option >北京</option>
+        <option >上海</option>
+        <option >广州</option>
+        <option selected>深圳</option>
+     </select>
+     <br>
+     <!-- 文本域 textarea 一行可见字符 cols 可见行数 rows -->
+     <!-- 实际开发使用css -->
+     <textarea cols="30" rows="10"></textarea>
+     <br>
+
+
+
+
+    </form>
+</body>
+</html>
