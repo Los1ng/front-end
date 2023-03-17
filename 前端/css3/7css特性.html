@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* <!-- css继承性 子级标签会继承父级标签属性-->
+    <!-- 文字控制属性可以继承
+    color 
+    font-style font-size  --> */
+        div{
+            color: red;
+            font-size: 12px;
+            height: 300px;
+        }
+        /* 继承失效  元素有浏览器默认样式时
+        1.a的color会失效
+        2.h的font-size会失效 */
+
+        /* css层叠性  
+        样式冲突时，选择器优先级相同时通过层叠性判断 */
+    </style>
+</head>
+<body>
+    
+    <div>
+        <span>我是span标签</span>
+        <a href="#">超链接</a>
+        <h1>我是一级标题</h1>
+    </div>
+</body>
+</html>
