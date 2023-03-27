@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 优先级 */
+        /* 继承《 通配符《 标签《 类《 id《 行内《 !imprtant */
+        /* 慎重使用 !important */
+        body{
+            color: red;
+        }
+        div{
+            color: green !important;
+        }
+        .box{
+            color: blue;
+        }
+        #box{
+            color: orange;
+        }
+        
+        /* 权重叠加计算 */
+        /* (行内，id，类，标签) */
+        /* !important,最高 */
+        /* 继承，最低 */
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box" style="color: pink;">
+        测试优先级
+    </div>
+</body>
+</html>

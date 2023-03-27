@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;/* 清除默认内外边距 */
+            padding: 0;
+            box-sizing: border-box;/* 盒子自动内减为宽高，不用考虑padding撑大 */
+            /*padding border 能撑大盒子  */
+        }
+        /* solid 实线
+           dashed 虚线 
+           dotted 点线*/
+        .f1 {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 20px;
+            padding: 20px 20px 20px 20px;/* padding 上右下左单独设置边框 */
+            padding-left: 20px;/* padding 单方向单独设置边框 */
+            border: 1px solid #000;
+            border-left: 1px solid #000;/* border 单方向单独设置边框 */
+        }
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            padding-top: 60px;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /* margin-top: 50px;  会作用到父级的margin */
+        }
+
+        /* 外边距折叠   */
+        /* 垂直布局的块元素的上下margin会合并，最终margin为MAX(m1,m2) */
+        /* 互相嵌套的块元素的子级margin会作用到父级上，用父级的padding可解决
+           父级overflow:hidden 也可以 */
+    </style>
+</head>
+<body>
+    <div class="f1">我是div标签</div>
+    <div class="father">
+        <div class="son">我是儿子</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动的标签  顶对齐 */
+        /* div{
+            width: 100px;
+            height: 100px;
+        } */
+        /* 浏览器解析行内块和行内时，源代码标签换行会布局产生空格 */
+        .top{
+            margin: 0 auto;
+            width: 320px;
+            background-color: pink;
+            /* overflow清除浮动法 */
+            overflow: hidden;
+        }
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            float: left;
+        }
+        .two{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            float: right;
+        }
+        .bottom{
+            height: 50px;
+            background-color: green;
+        }
+
+        /* 清除浮动  清除浮动给别的标签带来的影响  */
+        /* 父子级标签，子级浮动，父级没有高度就会影响其他标签 */
+
+        /* 额外标签法 ,父级最后加块级元素,并给块添加clear:both; 属性*/
+        /* .clearfix{
+            clear: both;
+        } */
+
+        /* <!-- 单伪元素清除法 用伪元素替代多余标签 --> */
+         .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+            /* 为了兼容性,可以添加 */
+            height: 0;
+            visibility: hidden;
+         }
+        
+         /* 双伪元素清除法  before解决外边距塌陷,after清除浮动 */
+         .clearfix::before,
+         .clearfix::after{
+            content: '';
+            display: table;
+         }
+         .clearfix::after{
+            clear: both;
+         }
+
+         
+
+    
+    /* css书写顺序 */
+    /* 1.浮动/display
+       2.盒子模型 margin border padding  宽高背景色
+       3.文字样式 
+    */
+
+    
+    </style>
+        
+</head>
+<body>
+    <!-- 浮动 -->
+    <!-- 1.图文环绕 -->
+    <!-- 2.网页布局 -->
+    <div class="top clearfix">
+      <div class="one">我是第1个标签</div>
+      <div class="two">我是第2个标签</div>
+      <!-- <div class="clearfix"></div> -->
+    </div>
+    <div class="bottom"></div>
+    <!-- 浮动标签会脱离标准流 不能标准流居中 -->
+
+    
+    
+
+</body>
+</html>

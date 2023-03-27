@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css书写：1.定位/浮动/display;2.盒子模型/文字属性 */
+        .box{
+            /* position:relative 相对定位  相对自己旧位置 不脱标占位*/
+            /* position:absolute 绝对定位  相对有定位父级 脱标不占位
+               或浏览器窗口 */
+            /* position:fixed    固定定位  相对浏览器 脱标不占位*/
+            /* 子绝父相  父级相对定位,子级绝对定位 */
+            /* 就近查找父级定位,逐级向上 */
+
+            /* 绝对定位脱标后居中 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* margin-left: -50px;
+            margin-top: -50px; */
+            transform: translate(-50%, -50%);
+
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+
+            /* z-index: ;取值越大,显示越靠上,默认为0 */
+
+            /* 浏览器遇到行内和行内块当文字处理,默认文字按基线对齐,
+            会导致不同块无法对齐 */
+            /* vertical-align: middle ;  */
+
+            /* 光标: cusor
+            1. pointer 小手,可点击
+            2. text 可复制
+            3. move 可移动*/
+
+            /* border-radius: 10px ; 边框圆角 */
+            /* border-radius: 50% ; 圆,必须是正方形形成 */
+            
+        }
+    </style>
+</head>
+<body>
+    <p>测试定位测试定位</p>
+    <p>测试定位测试定位</p>
+    <p>测试定位测试定位</p>
+    <div class="box">box</div>
+    <p>测试定位测试定位</p>
+    <p>测试定位测试定位</p>
+    <p>测试定位测试定位</p>
+</body>
+</html>
